@@ -1,5 +1,6 @@
 
 using BookStoreApp.Api.Data;
+using BookStoreApp.Api.Properties.Configurations;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 var connString = builder.Configuration.GetConnectionString("BookStoreAppDbConnection");
 builder.Services.AddDbContext<BookStoreDbContext>(options => options.UseSqlServer(connString));
 
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 
 builder.Services.AddControllers();

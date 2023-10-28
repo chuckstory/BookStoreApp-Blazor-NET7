@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookStoreApp.Api.Controllers
+namespace BookStoreApp.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -21,21 +21,20 @@ namespace BookStoreApp.Api.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogInformation("GetWeatherForecast called");
+            _logger.LogInformation("Made call to Weather Endpoint");
             try
             {
-                throw new Exception("This is our logging test exception.");
                 return Enumerable.Range(1, 5).Select(index => new WeatherForecast
                 {
-                    Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                    Date = DateTime.Now.AddDays(index),
                     TemperatureC = Random.Shared.Next(-20, 55),
                     Summary = Summaries[Random.Shared.Next(Summaries.Length)]
                 })
-            .ToArray();
+                .ToArray();
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error in GetWeatherForecast");
+                _logger.LogError(ex, "Fatal Error Occurred");
                 throw;
             }
             

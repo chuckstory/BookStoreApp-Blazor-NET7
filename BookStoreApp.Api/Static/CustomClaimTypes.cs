@@ -1,8 +1,7 @@
-﻿namespace BookStoreApp.Api.Static
+﻿namespace BookStoreApp.API.Static
 {
-    public class CustomClaimTypes
+    public static class CustomClaimTypes
     {
         public const string Uid = "uid";
-        public const string Role = "roles";
     }
 }

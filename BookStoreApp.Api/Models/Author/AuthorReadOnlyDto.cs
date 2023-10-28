@@ -1,4 +1,6 @@
-﻿namespace BookStoreApp.Api.Models.Author
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BookStoreApp.API.Models.Author
 {
     public class AuthorReadOnlyDto : BaseDto
     {

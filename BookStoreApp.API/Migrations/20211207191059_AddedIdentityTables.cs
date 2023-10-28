@@ -3,12 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace BookStoreApp.Api.Migrations
+namespace BookStoreApp.API.Migrations
 {
-    /// <inheritdoc />
-    public partial class AddedIdentityTable : Migration
+    public partial class AddedIdentityTables : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -49,8 +47,6 @@ namespace BookStoreApp.Api.Migrations
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                 });
-
-           
 
             migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
@@ -158,8 +154,6 @@ namespace BookStoreApp.Api.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -198,10 +192,8 @@ namespace BookStoreApp.Api.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
-
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

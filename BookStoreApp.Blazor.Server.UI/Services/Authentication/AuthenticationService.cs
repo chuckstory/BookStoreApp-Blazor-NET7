@@ -36,4 +36,5 @@ namespace BookStoreApp.Blazor.Server.UI.Services.Authentication
             await ((ApiAuthenticationStateProvider)authenticationStateProvider).LoggedOut();
         }
     }
+
 }

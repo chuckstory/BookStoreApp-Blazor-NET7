@@ -1,4 +1,4 @@
-﻿namespace BookStoreApp.Api.Static
+﻿namespace BookStoreApp.API.Static
 {
     public static class Messages
     {

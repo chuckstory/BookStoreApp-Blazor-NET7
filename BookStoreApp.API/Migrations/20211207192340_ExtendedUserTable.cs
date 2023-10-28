@@ -2,12 +2,10 @@
 
 #nullable disable
 
-namespace BookStoreApp.Api.Migrations
+namespace BookStoreApp.API.Migrations
 {
-    /// <inheritdoc />
-    public partial class ExtendedUser : Migration
+    public partial class ExtendedUserTable : Migration
     {
-        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
@@ -25,7 +23,6 @@ namespace BookStoreApp.Api.Migrations
                 defaultValue: "");
         }
 
-        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
